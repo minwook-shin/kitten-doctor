@@ -2,6 +2,8 @@
   "name": "Kitten Doctor",
   "version": "0.1",
   "manifest_version": 3,
+  "author": "minwook-shin",
+  "homepage_url": "https://github.com/minwook-shin/kitten-doctor",
   "permissions": [
     "storage"
   ],
