@@ -1,14 +1,22 @@
 {
-  "name": "Kitten Doctor",
+  "name": "__MSG_name__",
   "version": "0.1",
   "manifest_version": 3,
+  "default_locale": "en",
+  "current_locale": "en",
   "author": "minwook-shin",
   "homepage_url": "https://github.com/minwook-shin/kitten-doctor",
+  "description": "__MSG_description__",
   "permissions": [
     "storage"
   ],
   "action": {
-    "default_popup": "popup.html"
+    "default_popup": "src/html/popup.html"
+  },
+  "icons": {
+    "16": "icon/public_domain_kitten_icon.png",
+    "48": "icon/public_domain_kitten_icon.png",
+    "128": "icon/public_domain_kitten_icon.png"
   },
   "content_scripts": [
     {
@@ -16,7 +24,7 @@
         "<all_urls>"
       ],
       "js": [
-        "content-script.js"
+        "src/js/content-script.js"
       ],
       "run_at": "document_idle"
     }

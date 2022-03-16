@@ -1,0 +1,29 @@
+{
+  "name": {
+    "message": "아기 고양이 의사"
+  },
+  "description": {
+    "message": "웹페이지에 싫어하는 단어가 들어가면, 이미지 대신 아기 고양이가 나옵니다."
+  },
+  "how_to_1": {
+    "message": "삭제하고 싶은 불호 단어를 지정하시기 바랍니다."
+  },
+  "how_to_2": {
+    "message": "아기 고양이가 찾아옵니다!"
+  },
+  "selected_word": {
+    "message": "선택된 불호 단어:"
+  },
+  "prompt": {
+    "message": "단어 입력하기:"
+  },
+  "apply": {
+    "message": "적용"
+  },
+  "clear": {
+    "message": "초기화"
+  },
+  "license": {
+    "message": "코드 라이선스 : GPL3 \n 고양이 사진 : Public Domain"
+  }
+}

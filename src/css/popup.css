@@ -1,0 +1,7 @@
+* {
+    word-break: keep-all;
+    text-align: center;
+}
+html {
+    width: 300px;
+}
