@@ -2,18 +2,36 @@ document.body.onload = function () {
   chrome.storage.sync.get(['kitten_doctor_word'], function (result) {
     if (!chrome.runtime.error) {
       document.getElementById("selected_word").innerText = result.kitten_doctor_word;
+      if (result.kitten_doctor_word && result.kitten_doctor_word != "") {
+        chrome.action.setBadgeText({ text: 'ON' });
+      }
+      if (result.kitten_doctor_word == "") {
+        chrome.action.setBadgeText({ text: 'OFF' });
+      }
     }
   });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('btnapply').onclick = function () {
-    chrome.storage.sync.set({ kitten_doctor_word: document.getElementsByName("iname")[0].value }, function () {
-    })
+    if (document.getElementsByName("iname")[0].value && document.getElementsByName("iname")[0].value.trim() != "") {
+      chrome.storage.sync.set({ kitten_doctor_word: document.getElementsByName("iname")[0].value }, function () {
+      })
+      window.location.reload()
+      chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+        chrome.tabs.reload(tabs[0].id);
+      });
+      chrome.action.setBadgeText({ text: 'ON' });
+    }
   }
   document.getElementById('btnclear').onclick = function () {
-    chrome.storage.sync.set({ kitten_doctor_word: "does not exist." }, function () {
+    chrome.storage.sync.set({ kitten_doctor_word: "" }, function () {
     })
+    window.location.reload()
+    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+      chrome.tabs.reload(tabs[0].id);
+    });
+    chrome.action.setBadgeText({ text: 'OFF' });
   }
 })
 
