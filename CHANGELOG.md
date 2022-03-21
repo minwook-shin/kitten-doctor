@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.2 - 2022-03-21
+
+### Added
+
+- add options page
+  - Exclude images
+
+- add popup design
+
 ## 0.1.1 - 2022-03-17
 
 ### Added

@@ -23,7 +23,7 @@
   "clear": {
     "message": "초기화"
   },
-  "license": {
-    "message": "코드 라이선스 : GPL3 \n 고양이 사진 : Public Domain"
+  "go_to_option": {
+    "message": "옵션 바로가기"
   }
 }

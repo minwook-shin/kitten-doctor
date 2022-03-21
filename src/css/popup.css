@@ -3,5 +3,6 @@
     text-align: center;
 }
 html {
-    width: 300px;
+    min-width: auto;
+    min-height: auto;
 }

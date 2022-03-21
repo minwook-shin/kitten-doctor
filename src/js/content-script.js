@@ -5,6 +5,11 @@ chrome.storage.sync.get(['kitten_doctor_word'], function (result) {
     }
 })
 
+EXCLUDE_SMALL_IMG = true
+chrome.storage.sync.get({exclude_small_img: true}, function (result) {
+    EXCLUDE_SMALL_IMG = result["exclude_small_img"]
+})
+
 setTimeout(() => {
     if (BAD_WORD || BAD_WORD != "") {
         var body_block = document.querySelector('body')
@@ -14,7 +19,7 @@ setTimeout(() => {
             for (let image of document.querySelectorAll('img')) {
                 const width = image.offsetWidth
                 const height = image.offsetHeight
-                if (width <= 128 || height <= 128) {
+                if (EXCLUDE_SMALL_IMG && (width <= 128 || height <= 128)) {
                     continue
                 }
                 // https://placekitten.com/attribution.html 

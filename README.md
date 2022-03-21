@@ -6,6 +6,11 @@ https://chrome.google.com/webstore/detail/kitten-doctor/fipoeinjenipefmdbmokbhbj
 
 kitten doctor erases the dislike WORD.
 
+## Options
+
+* Exclude small (icon size 128*128) images
+  * default - True
+
 ## Support browser
 
 * chrome

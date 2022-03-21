@@ -23,7 +23,7 @@
   "clear": {
     "message": "clear"
   },
-  "license": {
-    "message": "Code License : GPL3 \n Kitten image : Public Domain"
+  "go_to_option": {
+    "message": "Go to options."
   }
 }
